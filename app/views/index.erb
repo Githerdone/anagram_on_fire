@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="/css/normalize.css">
+
+<div class="container">
+  <h1>Anagram! More fun than Dentistry!</h1>
+  <p>Please Enter a word to find it's Anagrams</p>
+
+
+    <form action="/anagram" method="post">
+    Give me an Anagram:
+    <br>
+    <input type="text" name="user_input">
+    <input type="submit" value="Submit">
+  </form>
+</div>
+<div class="container">
+  <% counter = 1 %>
+  <% if @anagram1 %>
+  <h2>Here are some anagrams</h2> 
+      <% @anagram1.each do |i| %>
+        <p><%= "#{counter}. " + i.value %></p>
+        <% counter += 1 %>
+       <%end%> 
+    <%end%>  
+  </div>
